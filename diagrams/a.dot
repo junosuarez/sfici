@@ -1,0 +1,13 @@
+graph G {
+  node [style = filled; color = purple; fontcolor = white;];
+  label = "Dyad";
+  
+  t1 [label = "Teacher";color = blue;];
+  s1 [label = "Student";];
+  
+  subgraph cluster_env {
+    color = red;
+    label = "Environment";
+    t1 -- s1;
+  }
+}

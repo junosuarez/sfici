@@ -1,0 +1,27 @@
+graph G {
+  node [style = filled; color = purple; fontcolor = white;];
+  layout = dot;
+  label = "AI Enhanced Teaching";
+  
+  
+  t1 [label = "Teacher";color = blue;];
+  s1 [label = "Student";];
+  s2 [label = "Student";];
+  s3 [label = "Student";];
+  a1 [label = "AI";color = darkgreen;];
+  
+  t1 -- a1;
+  
+  subgraph cluster_env {
+    color = red;
+    label = "Environment";
+    
+    t1 -- s1;
+    t1 -- s2;
+    t1 -- s3;
+    
+    
+    s1 -- s2 [constraint = false;];
+    s2 -- s3 [constraint = false;];
+  }
+}
