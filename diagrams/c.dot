@@ -1,6 +1,6 @@
 graph G {
   node [style = filled; color = purple; fontcolor = white;];
-  label = "Seminar";
+  label = "Peer-to-peer Learning";
   
   
   t1 [label = "Teacher";color = blue;];
@@ -9,8 +9,9 @@ graph G {
   s3 [label = "Student";];
   
   subgraph cluster_env {
-    color = red;
-    label = "Environment";
+    color = transparent;
+    // label = "Environment";
+    label = "";
     t1 -- s1 [group = 0;];
     t1 -- s2;
     t1 -- s3;

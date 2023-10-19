@@ -11,18 +11,14 @@ graph G {
   a1 [label = "AI";color = darkgreen;];
   
   
-  subgraph cluster_env {
-    color = red;
-    label = "Environment";
-    
-    t1 -- s1;
-    t1 -- s2;
-    t1 -- s3;
-    
-    
-    s1 -- s2 [constraint = false;];
-    s2 -- s3 [constraint = false;];
-  }
+  t1 -- s1;
+  t1 -- s2;
+  t1 -- s3;
+  
+  
+  s1 -- s2 [constraint = false;];
+  s2 -- s3 [constraint = false;];
+  
   
   s1 -- a1;
   s2 -- a1;
